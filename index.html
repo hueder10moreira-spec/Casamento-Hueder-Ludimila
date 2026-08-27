@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hueder & Ludimila</title>
+  <title>Hueder & Ludimila | Nosso Casamento</title>
 
   <style>
     * {
@@ -16,108 +16,187 @@
     body {
       min-height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       font-family: Georgia, "Times New Roman", serif;
       background:
-        linear-gradient(rgba(20, 30, 20, 0.35), rgba(20, 30, 20, 0.35)),
-        url("capa.jpg") center center / cover no-repeat fixed;
+        linear-gradient(rgba(246,242,233,.88), rgba(246,242,233,.88)),
+        radial-gradient(circle at top, #ffffff, #ddd5c6);
+      color: #453e34;
+      padding: 25px;
     }
 
-    .container {
-      width: 90%;
-      max-width: 500px;
+    .convite {
+      width: 100%;
+      max-width: 520px;
+      min-height: 720px;
+      background: #fffdf8;
+      border: 1px solid #c8b998;
+      box-shadow: 0 15px 45px rgba(0,0,0,.15);
       text-align: center;
-      padding: 45px 25px;
-      background: rgba(255, 255, 255, 0.88);
-      border-radius: 20px;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(4px);
+      padding: 65px 35px;
+      position: relative;
     }
 
-    h1 {
-      font-size: 38px;
-      color: #344735;
-      margin-bottom: 8px;
-      font-weight: normal;
+    .convite::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border: 1px solid #d8ccb5;
+      pointer-events: none;
+    }
+
+    .monograma {
+      font-size: 23px;
+      letter-spacing: 5px;
+      color: #9a8156;
+      margin-bottom: 55px;
     }
 
     .subtitulo {
-      font-size: 17px;
-      color: #756b60;
-      margin-bottom: 35px;
-      letter-spacing: 1px;
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #806f59;
     }
 
-    .idioma {
+    h1 {
+      font-size: 46px;
+      font-weight: normal;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #40372f;
+    }
+
+    .e {
       display: block;
-      width: 100%;
-      padding: 17px;
-      margin: 15px 0;
-      text-decoration: none;
-      border-radius: 50px;
-      font-size: 16px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: 0.3s;
-    }
-
-    .portugues {
-      background: #526b52;
-      color: white;
-      border: 2px solid #526b52;
-    }
-
-    .espanhol {
-      background: transparent;
-      color: #526b52;
-      border: 2px solid #526b52;
-    }
-
-    .idioma:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      font-size: 25px;
+      margin: 5px 0;
+      color: #a68b5b;
+      font-style: italic;
     }
 
     .data {
-      margin-top: 30px;
+      margin-top: 35px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .local {
+      margin-top: 13px;
       font-size: 15px;
-      color: #777;
+      line-height: 1.7;
+      color: #71675a;
+    }
+
+    .escolha {
+      margin-top: 55px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 310px;
+      margin: auto;
+    }
+
+    .botao {
+      display: block;
+      padding: 16px;
+      text-decoration: none;
+      color: #fff;
+      background: #756246;
+      border: 1px solid #756246;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: .25s;
+    }
+
+    .botao:hover {
+      background: #fffdf8;
+      color: #756246;
+    }
+
+    .rodape {
+      margin-top: 50px;
+      font-size: 13px;
+      font-style: italic;
+      color: #9a8d7c;
+    }
+
+    @media (max-width: 500px) {
+      .convite {
+        padding: 55px 25px;
+        min-height: 680px;
+      }
+
+      h1 {
+        font-size: 39px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <main class="convite">
 
-    <h1>Hueder & Ludimila</h1>
+    <div class="monograma">H ♥ L</div>
 
-    <p class="subtitulo">
-      Escolha seu idioma • Elige tu idioma
-    </p>
+    <div class="subtitulo">Nosso Casamento</div>
 
-    <!-- CONVITE EM PORTUGUÊS -->
-    <a
-      class="idioma portugues"
-      href="./convite-portugues.pdf"
-      target="_blank">
-      🇧🇷 VER CONVITE EM PORTUGUÊS
-    </a>
+    <h1>
+      Hueder
+      <span class="e">&</span>
+      Ludimila
+    </h1>
 
-    <!-- INVITACIÓN EN ESPAÑOL -->
-    <a
-      class="idioma espanhol"
-      href="./convite-espanhol.pdf"
-      target="_blank">
-      🇵🇾 VER INVITACIÓN EN ESPAÑOL
-    </a>
+    <div class="data">
+      28 · 11 · 2026
+    </div>
 
-    <p class="data">
-      28 • 11 • 2026
-    </p>
+    <div class="local">
+      Parque Don Martín · Área 6<br>
+      Hernandarias
+    </div>
 
-  </div>
+    <div class="escolha">
+      Escolha seu idioma
+    </div>
+
+    <div class="botoes">
+
+      <a
+        class="botao"
+        href="CONVITE-DE-CASAMENTO-HUEDER-LUDIMILA.pdf"
+        target="_blank">
+        Português
+      </a>
+
+      <a
+        class="botao"
+        href="INVITACION-DE-MATRIMONIO-HUEDER-LUDIMILA.pdf"
+        target="_blank">
+        Español
+      </a>
+
+    </div>
+
+    <div class="rodape">
+      Será uma alegria celebrar este momento com você.
+    </div>
+
+  </main>
 
 </body>
 </html>
